@@ -1,8 +1,8 @@
-@import "./__title/form__title.css";
-@import "./__input/form__input.css";
-@import "./__input-button/form__input-button.css";
-@import "./__input/_name/form__input_name.css";
-@import './__input/_profession/form__input_profession.css';
+@import url(./__title/form__title.css);
+@import url(./__input/form__input.css);
+@import url(./__input-button/form__input-button.css);
+@import url(./__input/_name/);
+@import url(./__input/_profession/);
 
 .form {
   box-sizing: border-box;
