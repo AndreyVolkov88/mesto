@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=divice-width, initial-scale=1.0" />
+    <meta name="description" content="программирование на JavaScript" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Volkov Andrey" />
+    <title>Mesto</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+
+  <body class="page">
+    
+    <main class="content">
+
+      <header class="header">
+        <a href="#" class="header__logo-link">
+          <img src="./images/logo_mesto.svg" alt="Логотип" class="header__logo">
+        </a>
+      </header>
+
+      <section class="profile">
+        <img src="./images/avatar.jpg" alt="Фотография" class="profile__avatar">
+       <div class="profile__info">
+        <div class="profile__info-item">
+          <h2 class="profile__title">Жак-Ив Кусто</h2>
+          <button type="button" class="profile__edit-button" title="Редактировать профиль"></button>
+        </div>
+        <p class="profile__subtitle">Исследователь океана</p>
+      </div>
+      <button type="button" class="profile__add-button" title="Добавить карточку"></button>
+    </section>
+
+
+      <section class="elements">
+        <ul class="elements__list">
+          <li class="elements__item">
+            <img src="./images/dombay.jpg" alt="Домбай" class="elements__image">
+            <article class="elements__item-bottom">
+              <h4 class="elements__item-title">Домбай</h4>
+              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+            </article>
+          </li>
+          <li class="elements__item">
+            <img src="./images/elbrus.jpg" alt="Эльбрус" class="elements__image">
+            <article class="elements__item-bottom">
+              <h4 class="elements__item-title">Эльбрус</h4>
+              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+            </article>
+          </li>
+          <li class="elements__item">
+            <img src="./images/Kazan.jpg" alt="Казань" class="elements__image">
+            <article class="elements__item-bottom">
+              <h4 class="elements__item-title">Казань</h4>
+              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+            </article>
+          </li>
+          <li class="elements__item">
+            <img src="./images/nurgush.jpg" alt="Заповедник Нугнуш" class="elements__image">
+            <article class="elements__item-bottom">
+              <h4 class="elements__item-title">Нургуш</h4>
+              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+            </article>
+          </li>
+          <li class="elements__item">
+            <img src="./images/vladivostok.jpg" alt="Владивосток" class="elements__image">
+            <article class="elements__item-bottom">
+              <h4 class="elements__item-title">Владивосток</h4>
+              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+            </article>
+          </li>
+          <li class="elements__item">
+            <img src="./images/karachaevsk.jpg" alt="Карачаевск" class="elements__image">
+            <article class="elements__item-bottom">
+              <h4 class="elements__item-title">Карачаевск</h4>
+              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">
+        <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+      </footer>
+    </main>
+    <div class="pop-up">
+      <div class="pop-up__container">
+        <button type="button" class="pop-up__close-icon" aria-label="Закрыть форму"></button>
+        <form name="form-edit-profile" action="#" class="form" method="POST">
+          <h3 class="form__title">Редактировать профиль</h3>
+          <input name="input-name" type="text" class="form__input form__input_name" placeholder="Имя Фамилия" required>
+          <input name="input-profession" type="text" class="form__input form__input_profession"
+            placeholder="Профессиональная деятельность" required>
+          <button type="submit" class="form__input-button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

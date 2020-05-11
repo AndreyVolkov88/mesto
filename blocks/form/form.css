@@ -1,0 +1,15 @@
+@import "./__title/form__title.css";
+@import "./__input/form__input.css";
+@import "./__input-button/form__input-button.css";
+@import "./__input/_name/form__input_name.css";
+@import './__input/_profession/form__input_profession.css';
+
+.form {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  align-self: flex-end;
+  padding: 34px 0;
+}
