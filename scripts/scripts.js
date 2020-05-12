@@ -9,30 +9,34 @@ let formInputName = form.querySelector('.form__input_name');
 let formInputProfession = form.querySelector('.form__input_profession');
 
 
-function setInputValue() {
-  formInputName.value = profileTitle.textContent;
-  formInputProfession.value = profileSubtitle.textContent;
-  console.log(formInputName.value);
-}
+// function setInputValue() {
+//   formInputName.value = profileTitle.textContent;
+//   formInputProfession.value = profileSubtitle.textContent;
+//   console.log(formInputName.value);
+// }
 
 function openPopup() {
-  popup.classList.add('pop-up_opened');
-  setInputValue();
+ if (popup.classList.contains('pop-up_opened'))
+  {
+    popup.classList.remove('pop-up_opened');
+  }
+  else {
+    popup.classList.add('pop-up_opened');
+    formInputName.value = profileTitle.textContent;
+  formInputProfession.value = profileSubtitle.textContent;
+  }
 }
 
-function closePopup() {
-  popup.classList.remove('pop-up_opened');
-}
 
-editButton.addEventListener('click', openPopup);
-closeIcon.addEventListener('click', closePopup);
 
 function formSubmitHandler (evt) {
   evt.preventDefault();
 
   profileTitle.textContent = formInputName.value;
   profileSubtitle.textContent = formInputProfession.value;
-  closePopup();
+  openPopup();
 }
 
+editButton.addEventListener('click', openPopup);
+closeIcon.addEventListener('click', openPopup);
 form.addEventListener('submit', formSubmitHandler);
