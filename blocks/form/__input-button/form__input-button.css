@@ -1,0 +1,29 @@
+.form__input-button {
+  display: block;
+  width: 83%;
+  margin: 45px auto 0;
+  height: 50px;
+  background-color: #000;
+  font-family: 'Inter',Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+  border: 2px solid #FFF;
+  transition: all 0.2s ease-in-out;
+}
+
+.form__input-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (max-width: 425px) {
+  .form__input-button {
+    width: 90%;
+  }
+}

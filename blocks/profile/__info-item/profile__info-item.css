@@ -1,0 +1,4 @@
+.profile__info-item {
+    display: flex;
+    align-items: baseline;
+}
