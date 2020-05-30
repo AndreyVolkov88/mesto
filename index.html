@@ -32,57 +32,16 @@
     </section>
 
 
-      <section class="elements content__position">
-        <ul class="elements__list">
-          <li class="elements__item">
-            <img src="./images/dombay.jpg" alt="Фотография горной местности Домбай" class="elements__image">
-            <article class="elements__item-bottom">
-              <h4 class="elements__item-title">Домбай</h4>
-              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
-            </article>
-          </li>
-          <li class="elements__item">
-            <img src="./images/elbrus.jpg" alt="Фотография Эльбрус на горизонте" class="elements__image">
-            <article class="elements__item-bottom">
-              <h4 class="elements__item-title">Эльбрус</h4>
-              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
-            </article>
-          </li>
-          <li class="elements__item">
-            <img src="./images/kazan.jpg" alt="Фотография Восхода на фоне мечети,Казань" class="elements__image">
-            <article class="elements__item-bottom">
-              <h4 class="elements__item-title">Казань</h4>
-              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
-            </article>
-          </li>
-          <li class="elements__item">
-            <img src="./images/nurgush.jpg" alt="Фотография восхода солнца, Заповедник Нугнуш" class="elements__image">
-            <article class="elements__item-bottom">
-              <h4 class="elements__item-title">Нургуш</h4>
-              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
-            </article>
-          </li>
-          <li class="elements__item">
-            <img src="./images/vladivostok.jpg" alt="Фотография берега и скалы,Владивосток" class="elements__image">
-            <article class="elements__item-bottom">
-              <h4 class="elements__item-title">Владивосток</h4>
-              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
-            </article>
-          </li>
-          <li class="elements__item">
-            <img src="./images/karachaevsk.jpg" alt="Фотогравия старинной церкви, Карачаевск" class="elements__image">
-            <article class="elements__item-bottom">
-              <h4 class="elements__item-title">Карачаевск</h4>
-              <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
-            </article>
-          </li>
-        </ul>
-      </section>
+    <section class="elements page__elements">
+      <ul class="elements__list"></ul>
+    </section>
 
       <footer class="footer content__position">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
       </footer>
+
     </main>
+
     <div class="pop-up">
       <div class="pop-up__container">
         <button type="button" class="pop-up__close-icon" aria-label="Закрыть форму"></button>
@@ -93,8 +52,37 @@
             placeholder="Профессиональная деятельность" required>
           <button type="submit" class="form__input-button">Сохранить</button>
         </form>
+        
+        <form name="form-add-card" action="#" class="form form_card" method="POST">
+          <h3 class="form__title">Новое место</h3>
+          <input name="input-name-card" type="text" class="form__input form__input_name-card" placeholder="Название"
+            required>
+          <input name="input-link-card" type="text" class="form__input form__input_link-card"
+            placeholder="Ссылка на картинку" required>
+          <button type="submit" class="form__input-button">Создать</button>
+        </form>
       </div>
     </div>
+
+    <div class="pop-up-image">
+      <figure class="pop-up-image__container">
+        <button type="button" class="pop-up-image__close-icon" aria-label="Закрыть форму"></button>
+        <img alt="Изображение" class="pop-up-image__img" src="">
+        <figcaption class="pop-up-image__description">Польский костел</figcaption>
+      </figure>
+    </div>
+
+    <template id="card">
+      <li class="elements__item">
+        <button type="button" class="elements__remove" aria-label="Удалить карточку"></button>
+        <div class="elements__image" style="background-image: url();"></div>
+        <article class="elements__item-bottom">
+          <h4 class="elements__item-title"></h4>
+          <button type="button" class="elements__like" aria-label="Поставить лайк в виде сердечка"></button>
+        </article>
+      </li>
+    </template>
+
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>
