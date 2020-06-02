@@ -34,45 +34,6 @@ const formProfile = document.querySelector(".form_profile");
 const elementsList = document.querySelector(".elements__list");
 const formCard = document.querySelector(".form_card");
 const popUpImage = document.querySelector(".pop-up-image");
-// const closeIcon = popup.querySelector('.pop-up__close-icon');
-// const profile = document.querySelector('.profile');
-// const editButton = profile.querySelector('.profile__edit-button');
-// let profileTitle = profile.querySelector('.profile__title');
-// let profileSubtitle = profile.querySelector('.profile__subtitle');
-// const form = document.querySelector('.form');
-// let formInputName = form.querySelector('.form__input_name');
-// let formInputProfession = form.querySelector('.form__input_profession');
-
-
-// function setInputValue() {
-//   formInputName.value = profileTitle.textContent;
-//   formInputProfession.value = profileSubtitle.textContent;
-//   console.log(formInputName.value);
-// }
-
-// function openPopup() {
-//  if (popup.classList.contains('pop-up_opened'))
-//   {
-//     popup.classList.remove('pop-up_opened');
-//   }
-//   else {
-//     popup.classList.add('pop-up_opened');
-//     formInputName.value = profileTitle.textContent;
-//   formInputProfession.value = profileSubtitle.textContent;
-//   }
-// }
-
-
-
-// function formSubmitHandler (evt) {
-//   evt.preventDefault();
-
-//   profileTitle.textContent = formInputName.value;
-//   profileSubtitle.textContent = formInputProfession.value;
-//   openPopup();
-// }
-
-// открытие и закрытие popUp
 
 const openAndClosePopup = (e) => {
   if (e.target.classList.contains("profile__edit-button")) {
