@@ -16,5 +16,5 @@
   align-items: center;
   display: flex;
   visibility: hidden;
-  animation: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

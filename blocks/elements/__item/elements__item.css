@@ -1,5 +1,5 @@
 .elements__item {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    position: relative;
 }

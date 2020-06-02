@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    align-items: center;
+    /* align-items: center; */
     background-color: #000;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -12,4 +12,5 @@
     text-rendering: optimizeLegibility;
     min-width: 320px;
     margin: 0 auto;
+    max-width: calc(882px + 19px * 2);
 }
