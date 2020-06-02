@@ -1,31 +1,31 @@
-.pop-up__close-icon {
-  display: block;
+.pop-up-image__close-icon {
+  position: absolute;
+  top: -36px;
+  right: -38px;
   outline: none;
   cursor: pointer;
   width: 36px;
   height: 36px;
-  padding: 0;
   background-image: url(../../../images/close_icon.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 170%;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
   margin-left: auto;
-  margin-right: -33px;
-  margin-bottom: -4px;
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
-.pop-up__close-icon:hover {
-  opacity: 0.5;
+.pop-up-image__close-icon:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 425px) {
-  .pop-up__close-icon {
+  .pop-up-image__close-icon {
     width: 30px;
     height: 30px;
-    margin-right: -30px;
-    margin-bottom: -2px;
+    top: -31px;
+    right: -32px;
   }
 }
