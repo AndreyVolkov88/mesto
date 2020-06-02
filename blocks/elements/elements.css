@@ -1,20 +1,23 @@
 @import url(./__list/elements__list.css);
 @import url(./__item/elements__item.css);
 @import url(./__image/elements__image.css);
-@import url(./__item-bottom/elements__item-bottom.css);
 @import url(./__item-title/elements__item-title.css);
-@import url(./__like/elements__like.css);
+@import url(../elements/__item-bottom/elements__item-bottom.css);
+@import url(../elements/__like/elements__like.css);
+@import url(./__remove/elements__remove.css);
 
 
-
+/* 
 .elements {
-    max-width: 882px;
-    padding-bottom: 66px;
+  padding: 50px 19px 0;
+  margin: 0 auto;
+  max-width: calc(882px + 19px * 2);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@media screen and (max-width: 425px) {
-    .elements {
-      padding-bottom: 36px;
-    }
+@media screen and (max-width: 590px) {
+  .elements {
+      padding: 36px 19px 0;
+  } */
 }
-  
