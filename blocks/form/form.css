@@ -3,6 +3,7 @@
 @import url(./__input-button/form__input-button.css);
 @import url(./__input/_name/);
 @import url(./__input/_profession/);
+@import url(./_non-active/form_non-active.css);
 
 .form {
   box-sizing: border-box;
@@ -12,4 +13,10 @@
   border-radius: 10px;
   align-self: flex-end;
   padding: 34px 0;
+}
+
+@media screen and (max-width: 425px) {
+  .form {
+    padding: 30px 0;
+  }
 }
