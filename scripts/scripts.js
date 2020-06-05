@@ -72,9 +72,9 @@ const submitFormCard = (e) => {
   popUp.classList.remove("pop-up_opened");
 };
 
-const createCardInList = (Name, Link) => { 
+const createCardInList = (name, link) => { 
   elementsList.prepend(
-    createCard(Name, Link)
+    createCard(name, link)
   );
 }
  
