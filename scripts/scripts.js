@@ -66,15 +66,15 @@ const submitFormCard = (e) => {
   const formInputNameCard = document.querySelector(".form__input_name-card");
   const formInputLinkCard = document.querySelector(".form__input_link-card");
 
-  createCardInList(formInputNameCard, formInputLinkCard);
+  createCardInList(formInputNameCard.value, formInputLinkCard.value);
   formInputNameCard.value = "";
   formInputLinkCard.value = "";
   popUp.classList.remove("pop-up_opened");
 };
 
-const createCardInList = (formInputNameCard, formInputLinkCard) => { 
+const createCardInList = (Name, Link) => { 
   elementsList.prepend(
-    createCard(formInputNameCard.value, formInputLinkCard.value)
+    createCard(Name, Link)
   );
 }
  
