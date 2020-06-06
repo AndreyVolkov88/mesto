@@ -59,23 +59,25 @@ const createCard = (name, link) => {
   return card;
 };
 
-
   // Отправка форм карт.
 const submitFormCard = (e) => {
   e.preventDefault();
+  
   const formInputNameCard = document.querySelector(".form__input_name-card");
   const formInputLinkCard = document.querySelector(".form__input_link-card");
 
-  createCardInList(formInputNameCard.value, formInputLinkCard.value);
+  const card = createCard(formInputNameCard.value, formInputLinkCard.value); //Добавление пременной card.
+
+  createCardInList(card, elementsList);//Добавление в качестве аргумента карточки и контейнера в которую её добавляем.
+
   formInputNameCard.value = "";
   formInputLinkCard.value = "";
+
   popUp.classList.remove("pop-up_opened");
 };
 
-const createCardInList = (name, link) => { 
-  elementsList.prepend(
-    createCard(name, link)
-  );
+const createCardInList = (card, elementsList) => { 
+  elementsList.prepend(card);
 }
  
 // Переключение состояния кнопки лайк на картинке.
