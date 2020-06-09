@@ -60,12 +60,18 @@
           <button type="submit" class="form__input-button">Сохранить</button>
         </form>
         
-        <form name="form-add-card" action="#" class="form form_card" method="POST">
+        <form novalidate name="form-add-card" action="#" class="form form_card" method="POST">
           <h3 class="form__title">Новое место</h3>
-          <input name="input-name-card" type="text" class="form__input form__input_name-card" placeholder="Название"
-            required>
-          <input name="input-link-card" type="text" class="form__input form__input_link-card"
-            placeholder="Ссылка на картинку" required>
+          <div class="form__input-container">
+            <input name="input-name-card" type="text" class="form__input form__input_name-card" placeholder="Название"
+              required minlength="1" maxlength="30" pattern="[A-Za-zА-Яа-яЁё\s\-]+">
+            <span class="form__input-error input-name-card-error">Ошибка</span>
+          </div>
+          <div class="form__input-container">
+            <input name="input-link-card" type="url" class="form__input form__input_link-card"
+              placeholder="Ссылка на картинку" required>
+            <span class="form__input-error input-link-card-error">Ошибка</span>
+          </div>
           <button type="submit" class="form__input-button">Создать</button>
         </form>
       </div>
@@ -90,6 +96,7 @@
       </li>
     </template>
      <script src="./scripts/initialCards.js"></script>
+     <script src="./scripts/validate.js"></script>
     <script src="./scripts/scripts.js"></script>
   </body>
 </html>
