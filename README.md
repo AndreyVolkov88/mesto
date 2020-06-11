@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 # Проект 6: [Mesto](https://andreyvolkov88.github.io/mesto/)
-=======
-
-=======
-# Проект 4: [Mesto](https://andreyvolkov88.github.io/mesto/)
->>>>>>> e2ebd948055c2b765966be83e49f26188ef5ad9d
 
 ------
 
