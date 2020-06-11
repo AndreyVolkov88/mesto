@@ -32,7 +32,7 @@ const formReset = () => {
 };
 
 //Заполнение профиля после закрытия.
-const fillOutProfileAfterCloseForm = () => {
+const saveProfileCloseForm = () => {
   formInputName.value = profileTitle.textContent;
   formInputProfession.value = profileSubtitle.textContent;
 };
@@ -107,7 +107,7 @@ initialCards.forEach(({ name, link }) => {
 const openPopupFormProfile = () => {
   formCard.classList.add("form_non-active");
   formProfile.classList.remove("form_non-active");
-  fillOutProfileAfterCloseForm();
+  saveProfileCloseForm();
   popUp.classList.add("pop-up_opened");
   document.addEventListener("keyup", closePopupByEsc);
 };
@@ -171,10 +171,8 @@ const removeCard = (e) => {
 const zoomImage = (e) => {
   if (e.target.classList.contains("elements__image")) {
     const popUpImageImg = document.querySelector(".pop-up-image__img");
-    popUpImageImg.src = e.target.style.backgroundImage.slice(5, -2);
-    const popUpImageDescription = document.querySelector(
-      ".pop-up-image__description"
-    );
+    popUpImageImg.src = e.target.src;
+    const popUpImageDescription = document.querySelector(".pop-up-image__description");
     popUpImageDescription.textContent = e.target
       .closest(".elements__item")
       .querySelector(".elements__item-title").textContent;
