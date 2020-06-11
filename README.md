@@ -1,4 +1,4 @@
-# Проект 6: MESTO
+# Проект 6: [Mesto](https://andreyvolkov88.github.io/mesto/)
 
 ------
 
