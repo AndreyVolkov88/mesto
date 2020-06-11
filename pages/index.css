@@ -10,8 +10,9 @@
 @import url(../blocks/profile/profile.css);
 /* pop-up */
 @import url(../blocks/pop-up/pop-up.css);
-@import url(../blocks/form/form.css);
 @import url(../blocks/pop-up/_opened/pop-up_opened.css);
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__input-error/_visible/form__input-error_visible.css);
 /* elements */
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/elements/__like/_active/elements__like_active.css);
@@ -22,6 +23,7 @@
 /* pop-up-image */
 @import url(../blocks/pop-up-image/pop-up-image.css);
 @import url(../blocks/pop-up-image/_opened/pop-up-image_opened.css);
+
 
 
 
