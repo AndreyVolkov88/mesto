@@ -17,7 +17,7 @@ const hideMessageError = (input, errorClass, errorInputSelector) => {
 };
 //Если инпут валиден, разблокировать кнопку, скрывать ошибки, 
 //если нет - выводить ошибки и оставить кнопку заблокированной.
-const formValid = (
+const setEventInputListeners = (
   form,
   inputSelector,
   errorClass,
@@ -32,21 +32,31 @@ const formValid = (
       if (input.checkValidity()) {
         hideMessageError(input, errorClass, errorInputSelector);
         if (form.checkValidity()) {
-          buttonElement.removeAttribute("disabled");
+          toggleButtonState(formElement, buttonElement);
         }
       } else {
         showMessageError(input, errorClass, errorInputSelector);
-        buttonElement.setAttribute("disabled", true);
+        toggleButtonState(formElement, buttonElement);
       }
     });
   });
 };
+ 
+// Переключение состояния кнопки в зависимости от валидности формы.
+const toggleButtonState = (formElement, buttonElement) => { 
+  const isValid = formElement.checkValidity();
+  if(isValid) {
+    buttonElement.removeAttribute("disabled");
+  } else {
+    buttonElement.setAttribute("disabled", true);
+  }
+}
 
 //Включить валидацию для форм.
 const enableValidation = (options) => {
   const formsList = document.querySelectorAll(options.formSelector);
   formsList.forEach((form) => {
-     formValid(
+     setEventInputListeners(
       form,
       options.inputSelector,
       options.errorClass,
