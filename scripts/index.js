@@ -80,6 +80,7 @@ const openPopupImage = () => {
 //Добавляем обработчик событий, клик по картинке - открыть картинку.
 const addEventClickForImage = (card) => {
   card.addEventListener("click", openPopupImage);
+  console.log('Солнце село, но мы работаем!')
   };
 ;
 // Добавление новых карточек.
@@ -144,6 +145,7 @@ const submitFormCard = (e) => {
   formInputLinkCard.value = "";
   popUp.classList.remove("pop-up_opened");
   clearErrors();
+  addEventClickForImage(card);
 };
 
  
