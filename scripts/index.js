@@ -78,11 +78,11 @@ const openPopupImage = () => {
 };
 
 //Добавляем обработчик событий, клик по картинке - открыть картинку.
-const addEventClickForImage = () => {
-  document.querySelectorAll(".elements__image").forEach((image) => {
-    image.addEventListener("click", openPopupImage);
-  });
-};
+const addEventClickForImage = (card) => {
+  card.addEventListener("click", openPopupImage);
+  console.log('Солнце село, но мы работаем!')
+  };
+;
 // Добавление новых карточек.
 const createCard = (name, link) => {
   const card = document.querySelector("#card").content.cloneNode(true);
@@ -91,7 +91,7 @@ const createCard = (name, link) => {
   const elementsItemTitle = card.querySelector(".elements__item-title");
   elementsItemTitle.textContent = name;
   elementsImage.alt = `Фотография места под названием ${name}`;
-  addEventClickForImage();
+  addEventClickForImage(card);
   return card;
 };
 
@@ -145,7 +145,7 @@ const submitFormCard = (e) => {
   formInputLinkCard.value = "";
   popUp.classList.remove("pop-up_opened");
   clearErrors();
-  addEventClickForImage();
+  addEventClickForImage(card);
 };
 
  
