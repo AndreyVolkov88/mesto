@@ -79,7 +79,6 @@ const openPopupImage = () => {
 
 //Добавляем обработчик событий, клик по картинке - открыть картинку.
 const addEventClickForImage = (card) => {
-  // const card = document.querySelector("#card")
   card.addEventListener("click", openPopupImage);
   };
 ;
@@ -145,7 +144,6 @@ const submitFormCard = (e) => {
   formInputLinkCard.value = "";
   popUp.classList.remove("pop-up_opened");
   clearErrors();
-  addEventClickForImage(card);
 };
 
  
