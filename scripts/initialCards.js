@@ -1,4 +1,4 @@
-const initialCards = [
+export const initialCards = [
     {
         name: 'Архыз',
         link: 'https://turgeek.ru/upload/tour/images_more/6393/big-4-trekking-v-arhyze-komfort-tur-s-gostinicej.jpg'
