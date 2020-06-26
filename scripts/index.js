@@ -1,16 +1,21 @@
 import { Card } from './Card.js';
 import { FormValidator } from './FormValidator.js';
-import { initialCards } from "./initialCards.js";
+import { initialCards } from './initialCards.js';
+import { 
+  closePopupByEsc,
+  clearErrors,
+  togglePopup,
+  popUp,
+  popUpImage,
+  formProfile,
+  formCard,
+} from './utils.js';
 
-const popUp = document.querySelector('.pop-up');
 const formInputName = document.querySelector(".form__input_name");
 const formInputProfession = document.querySelector(".form__input_profession");
 const profileTitle = document.querySelector(".profile__title");
 const profileSubtitle = document.querySelector(".profile__subtitle");
-const formProfile = document.querySelector(".form_profile");
 const elementsList = document.querySelector(".elements__list");
-const formCard = document.querySelector(".form_card");
-const popUpImage = document.querySelector(".pop-up-image");
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAddButton = document.querySelector(".profile__add-button");
 
@@ -21,47 +26,12 @@ const data = {
   submitButtonSelector: ".form__input-button",
 }
 
-const formValidator1 = new FormValidator(data, ".form_profile");
-formValidator1.enableValidation();
+const formProfileValidator = new FormValidator(data, ".form_profile");
+formProfileValidator.enableValidation();
 
-const formValidator2 = new FormValidator(data, ".form_card");
-formValidator2.enableValidation();
+const formСardValidator = new FormValidator(data, ".form_card");
+formСardValidator.enableValidation();
 
-//Открытие и закрытие popUp.
-const togglePopup = (popup) => {
-  popup.classList.toggle("pop-up-opened");
-};
-
-//Очищаем от ошибок.
-const clearErrors = (formElement) => {
-  formElement.querySelectorAll(".form__input-error").forEach((span) => {
-    span.textContent = "";
-  });
-  formElement.querySelectorAll(".form__input").forEach((input) => {
-    input.classList.remove("form__input_type_error");
-  });
-  formElement
-    .querySelector(".form__input-button")
-    .setAttribute("disabled", true);
-};
-
-//Закрытие попап по нажатию на Ecs.
-export const closePopupByEsc = (e) => {
-  if (e.key === "Escape" && popUp.classList.contains("pop-up-opened")) {
-    formProfile.classList.contains("form_non-active") ? formCard.reset() : null;
-    formProfile.classList.contains("form_non-active")
-      ? clearErrors(formCard)
-      : clearErrors(formProfile);
-    togglePopup(popUp);
-    document.removeEventListener("keyup", closePopupByEsc);
-  } else if (
-    e.key === "Escape" &&
-    popUpImage.classList.contains("pop-up-opened")
-  ) {
-    togglePopup(popUpImage);
-    document.removeEventListener("keyup", closePopupByEsc);
-  }
-};
 //Закрытие popup редактирования профиля и сброс ошибок.
 const closePopupForm = (e) => {
   if (
@@ -121,7 +91,8 @@ const submitFormProfile = (e) => {
   profileTitle.textContent = formInputName.value;
   profileSubtitle.textContent = formInputProfession.value;
   togglePopup(popUp);
-  clearErrors(formProfile);
+  formProfileValidator.hideMessageError(formProfile);
+  // clearErrors(formProfile);
 };
 
 const submitFormCard = (e) => {
