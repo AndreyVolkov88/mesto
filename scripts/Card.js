@@ -1,4 +1,4 @@
-import { closePopupByEsc } from "./index.js";
+import { closePopupByEsc } from "./utils.js";
 
 export class Card {
   constructor(data, templateSelector, popupSelector) {
@@ -38,6 +38,7 @@ export class Card {
   // Удаление карточки при нажатии на "корзину".
   _deleteCard() {
     this._element.remove();
+    // this._element = null; если правильно Вас понял.
   }
 
   // Включение/выключение лайков при нажатии.

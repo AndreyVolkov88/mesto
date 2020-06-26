@@ -9,24 +9,25 @@ export class FormValidator {
     
     //Показывает сообщение об ошибке ввода.
     _showMessageError(input) {
-        input.classList.add(this._errorInputSelector);
-        const errorElement = document.querySelector(`#${input.name}-error`);
-        errorElement.classList.add(this._errorClass);
-        errorElement.textContent = input.validationMessage;
+      input.classList.add(this._errorInputSelector);
+      const errorElement = document.querySelector(`#${input.name}-error`);
+      errorElement.classList.add(this._errorClass);
+      errorElement.textContent = input.validationMessage;
       }
 
     //Скрывает сообщение об ошибке ввода.
-    _hideMessageError(input) {
-        input.classList.remove(this._errorInputSelector);
-        const errorElement = document.querySelector(`#${input.name}-error`);
-        errorElement.classList.remove(this._errorClass);
-        errorElement.textContent = "";
-      }
+    hideMessageError(input) {
+      input.classList.remove(this._errorInputSelector);
+      const errorElement = document.querySelector(`#${input.name}-error`);
+      errorElement.classList.remove(this._errorClass);
+      errorElement.textContent = "";
+      // _setStateOfButton();
+    }
 
       //Проверка вводимых данных на валидность.
       _checkInputValidity(input) {
         if (input.checkValidity()) {
-          this._hideMessageError(input);
+          this.hideMessageError(input);
         } else {
           this._showMessageError(input);
         }
