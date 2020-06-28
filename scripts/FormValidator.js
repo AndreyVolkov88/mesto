@@ -5,6 +5,7 @@ export class FormValidator {
       this._errorClass = data.errorClass;
       this._submitButtonSelector = data.submitButtonSelector;
       this._formSelector = formSelector;
+      this._formElement = document.querySelector(this._formSelector);
     }
     
     //Показывает сообщение об ошибке ввода.
@@ -15,19 +16,28 @@ export class FormValidator {
       errorElement.textContent = input.validationMessage;
       }
 
+    //Скрывает все сообщения об ошибке ввода.
+    hideMessageErrors() {
+      this._formElement.querySelectorAll(".form__input").forEach((input) => {
+        this._hideMessageError(input)
+      });
+    }
+   
+    
     //Скрывает сообщение об ошибке ввода.
-    hideMessageError(input) {
-      input.classList.remove(this._errorInputSelector);
-      const errorElement = document.querySelector(`#${input.name}-error`);
+    _hideMessageError(inputElement) {
+      inputElement.classList.remove(this._errorInputSelector);
+      const errorElement = this._formElement.querySelector(`#${inputElement.name}-error`);
       errorElement.classList.remove(this._errorClass);
       errorElement.textContent = "";
-      // _setStateOfButton();
+      this._setStateOfButton();
     }
+    
 
       //Проверка вводимых данных на валидность.
       _checkInputValidity(input) {
         if (input.checkValidity()) {
-          this.hideMessageError(input);
+          this._hideMessageError(input);
         } else {
           this._showMessageError(input);
         }

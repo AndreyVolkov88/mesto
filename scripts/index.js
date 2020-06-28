@@ -44,7 +44,7 @@ const closePopupForm = (e) => {
       : null;
     formProfile.classList.contains("form_non-active")
       ? clearErrors(formCard)
-      : clearErrors(formProfile);
+      : formProfileValidator.hideMessageErrors(formProfile);
     document.removeEventListener("keyup", closePopupByEsc);
   }
 };
@@ -91,8 +91,7 @@ const submitFormProfile = (e) => {
   profileTitle.textContent = formInputName.value;
   profileSubtitle.textContent = formInputProfession.value;
   togglePopup(popUp);
-  formProfileValidator.hideMessageError(formProfile);
-  // clearErrors(formProfile);
+  formProfileValidator.hideMessageErrors();
 };
 
 const submitFormCard = (e) => {
