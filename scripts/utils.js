@@ -1,8 +1,16 @@
-import { FormValidator, data } from './FormValidator.js';
+import { FormValidator } from './FormValidator.js';
 export const popUp = document.querySelector(".pop-up");
 export const popUpImage = document.querySelector(".pop-up-image");
 export const formProfile = document.querySelector(".form_profile");
 export const formCard = document.querySelector(".form_card");
+export const popupImageImg = document.querySelector(".pop-up-image__img");
+export const popUpImageDescription = document.querySelector(".pop-up-image__description");
+export const data = {
+  inputSelector: ".form__input",
+  errorInputSelector: "form__input_type_error",
+  errorClass: "form__input-error_visible",
+  submitButtonSelector: ".form__input-button",
+}
 
 //Открытие и закрытие popUp.
 export const togglePopup = (popup) => {

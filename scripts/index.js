@@ -1,8 +1,5 @@
 import { Card } from './Card.js';
-import { 
-  FormValidator,
-  data 
-} from './FormValidator.js';
+import { FormValidator } from './FormValidator.js';
 import { initialCards } from './initialCards.js';
 import { 
   closePopupByEsc,
@@ -11,6 +8,7 @@ import {
   popUpImage,
   formProfile,
   formCard,
+  data
 } from './utils.js';
 
 const formInputName = document.querySelector(".form__input_name");
