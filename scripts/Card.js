@@ -1,7 +1,8 @@
-import { closePopupByEsc } from "./utils.js";
-
-export const popupImageImg = document.querySelector(".pop-up-image__img");
-export const popUpImageDescription = document.querySelector(".pop-up-image__description");
+import { 
+  closePopupByEsc, 
+  popupImageImg, 
+  popUpImageDescription 
+} from "./utils.js";
 
 export class Card {
   constructor(data, templateSelector, popupSelector) {
