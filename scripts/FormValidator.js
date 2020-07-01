@@ -17,7 +17,7 @@ export class FormValidator {
       }
 
     //Скрывает все сообщения об ошибке ввода.
-    hideMessageErrors() {
+    makeClear() {
       this._formElement.querySelectorAll(".form__input").forEach((input) => {
         this._hideMessageError(input)
       });
@@ -30,7 +30,6 @@ export class FormValidator {
       const errorElement = this._formElement.querySelector(`#${inputElement.name}-error`);
       errorElement.classList.remove(this._errorClass);
       errorElement.textContent = "";
-      this._setStateOfButton();
     }
     
 

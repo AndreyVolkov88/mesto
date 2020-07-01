@@ -1,9 +1,12 @@
-import { Card } from './Card.js';
+import { 
+  Card,
+  popupImageImg,
+  popUpImageDescription
+ } from './Card.js';
 import { FormValidator } from './FormValidator.js';
 import { initialCards } from './initialCards.js';
 import { 
   closePopupByEsc,
-  clearErrors,
   togglePopup,
   popUp,
   popUpImage,
@@ -43,8 +46,8 @@ const closePopupForm = (e) => {
       ? formCard.reset() 
       : null;
     formProfile.classList.contains("form_non-active")
-      ? clearErrors(formCard)
-      : formProfileValidator.hideMessageErrors(formProfile);
+      ? formСardValidator.makeClear()
+      : formProfileValidator.makeClear();
     document.removeEventListener("keyup", closePopupByEsc);
   }
 };
@@ -91,7 +94,7 @@ const submitFormProfile = (e) => {
   profileTitle.textContent = formInputName.value;
   profileSubtitle.textContent = formInputProfession.value;
   togglePopup(popUp);
-  formProfileValidator.hideMessageErrors();
+  formProfileValidator.makeClear(formProfile);
 };
 
 const submitFormCard = (e) => {
@@ -103,7 +106,7 @@ const submitFormCard = (e) => {
   elementsList.prepend(card.generateCard());
   formCard.reset();
   togglePopup(popUp);
-  clearErrors(formCard);
+  formСardValidator.makeClear();
 };
 
  

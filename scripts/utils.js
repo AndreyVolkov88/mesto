@@ -8,26 +8,13 @@ export const togglePopup = (popup) => {
     popup.classList.toggle("pop-up-opened");
   };
   
-  //Очищаем от ошибок.
- export const clearErrors = (formElement) => {
-    formElement.querySelectorAll(".form__input-error").forEach((span) => {
-      span.textContent = "";
-    });
-    formElement.querySelectorAll(".form__input").forEach((input) => {
-      input.classList.remove("form__input_type_error");
-    });
-    formElement
-      .querySelector(".form__input-button")
-      .setAttribute("disabled", true);
-  };
-
 //Закрытие попап по нажатию на Ecs.
 export const closePopupByEsc = (e) => {
     if (e.key === "Escape" && popUp.classList.contains("pop-up-opened")) {
       formProfile.classList.contains("form_non-active") ? formCard.reset() : null;
       formProfile.classList.contains("form_non-active")
-        ? clearErrors(formCard)
-        : clearErrors(formProfile);
+        ? formСardValidator.makeClear()
+        : formProfileValidator.makeClear();
       togglePopup(popUp);
       document.removeEventListener("keyup", closePopupByEsc);
     } else if (

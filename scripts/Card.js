@@ -1,5 +1,8 @@
 import { closePopupByEsc } from "./utils.js";
 
+export const popupImageImg = document.querySelector(".pop-up-image__img");
+export const popUpImageDescription = document.querySelector(".pop-up-image__description");
+
 export class Card {
   constructor(data, templateSelector, popupSelector) {
     this._name = data.name;
@@ -38,7 +41,7 @@ export class Card {
   // Удаление карточки при нажатии на "корзину".
   _deleteCard() {
     this._element.remove();
-    // this._element = null; если правильно Вас понял.
+    this._element = null;
   }
 
   // Включение/выключение лайков при нажатии.
@@ -49,13 +52,7 @@ export class Card {
   //Открытие || закрытие 
   _openPopup() {
     this._elementPopup.classList.add("pop-up-opened");
-    const popupImageImg = this._elementPopup.querySelector(
-      ".pop-up-image__img"
-    );
     popupImageImg.src = this._link;
-    const popUpImageDescription = this._elementPopup.querySelector(
-      ".pop-up-image__description"
-    );
     popUpImageDescription.textContent = this._name;
     document.addEventListener("keyup", closePopupByEsc);
   }
