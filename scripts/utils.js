@@ -1,3 +1,4 @@
+import { FormValidator, data } from './FormValidator.js';
 export const popUp = document.querySelector(".pop-up");
 export const popUpImage = document.querySelector(".pop-up-image");
 export const formProfile = document.querySelector(".form_profile");
@@ -8,13 +9,17 @@ export const togglePopup = (popup) => {
     popup.classList.toggle("pop-up-opened");
   };
   
+
+
 //Закрытие попап по нажатию на Ecs.
 export const closePopupByEsc = (e) => {
+  const formProfileValidatorClear = new FormValidator(data, ".form_profile");
+  const formСardValidatorClear = new FormValidator(data, ".form_card");
     if (e.key === "Escape" && popUp.classList.contains("pop-up-opened")) {
       formProfile.classList.contains("form_non-active") ? formCard.reset() : null;
       formProfile.classList.contains("form_non-active")
-        ? formСardValidator.makeClear()
-        : formProfileValidator.makeClear();
+        ? formСardValidatorClear.makeClear()
+        : formProfileValidatorClear.makeClear();
       togglePopup(popUp);
       document.removeEventListener("keyup", closePopupByEsc);
     } else if (
@@ -25,3 +30,5 @@ export const closePopupByEsc = (e) => {
       document.removeEventListener("keyup", closePopupByEsc);
     }
   };
+
+  
