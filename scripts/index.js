@@ -1,9 +1,8 @@
+import { Card } from './Card.js';
 import { 
-  Card,
-  popupImageImg,
-  popUpImageDescription
- } from './Card.js';
-import { FormValidator } from './FormValidator.js';
+  FormValidator,
+  data 
+} from './FormValidator.js';
 import { initialCards } from './initialCards.js';
 import { 
   closePopupByEsc,
@@ -21,13 +20,6 @@ const profileSubtitle = document.querySelector(".profile__subtitle");
 const elementsList = document.querySelector(".elements__list");
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileAddButton = document.querySelector(".profile__add-button");
-
-const data = {
-  inputSelector: ".form__input",
-  errorInputSelector: "form__input_type_error",
-  errorClass: "form__input-error_visible",
-  submitButtonSelector: ".form__input-button",
-}
 
 const formProfileValidator = new FormValidator(data, ".form_profile");
 formProfileValidator.enableValidation();
@@ -94,7 +86,7 @@ const submitFormProfile = (e) => {
   profileTitle.textContent = formInputName.value;
   profileSubtitle.textContent = formInputProfession.value;
   togglePopup(popUp);
-  formProfileValidator.makeClear(formProfile);
+  formProfileValidator.makeClear();
 };
 
 const submitFormCard = (e) => {
