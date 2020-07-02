@@ -67,6 +67,7 @@ const openPopupFormProfile = () => {
   formInputProfession.value = profileSubtitle.textContent;
   togglePopup(popUp);
   document.addEventListener("keyup", closePopupByEsc);
+  formProfileValidator.makeClear();
 };
 
 //Открытие popUp карточек и закрытие по Esc.
@@ -75,6 +76,7 @@ const openPopupFormCard = () => {
   formProfile.classList.add("form_non-active");
   togglePopup(popUp);
   document.addEventListener("keyup", closePopupByEsc);
+  formСardValidator.makeClear()
 };
 
 
