@@ -21,6 +21,7 @@ export class FormValidator {
       this._formElement.querySelectorAll(".form__input").forEach((input) => {
         this._hideMessageError(input)
       });
+      this._setStateOfButton()
     }
    
     
