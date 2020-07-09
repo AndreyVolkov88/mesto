@@ -1,0 +1,11 @@
+.profile__info-item {
+  display: flex;
+  align-items: baseline;
+}
+
+@media screen and (max-width: 590px) {
+  .profile__info-item {
+    margin-top: 25px;
+    justify-content: center;
+  }
+}
