@@ -1,8 +1,0 @@
-@import url(./__position/content__position.css);
-
- .content {
-    min-width: 320px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}

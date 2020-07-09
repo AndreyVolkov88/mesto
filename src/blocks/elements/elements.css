@@ -1,0 +1,8 @@
+@import "./__list/elements__list.css";
+@import "./__item/elements__item.css";
+@import "./__image/elements__image.css";
+@import "./__item-title/elements__item-title.css";
+@import "../elements/__item-bottom/elements__item-bottom.css";
+@import "../elements/__like/elements__like.css";
+@import "../elements/__remove/elements__remove.css";
+
