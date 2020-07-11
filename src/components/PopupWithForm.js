@@ -3,7 +3,8 @@ import Popup from "./Popup.js";
 const selectors = {
   formInputName: ".form__input_name",
   formInput: ".form__input",
-  formInputProfession: ".form__input_profession",
+  formInputDataUser: ".form__input_profession",//Переименовал formInputProfession в formInputDataUser 
+  //согласно замечаниям после ревью: "Cделать более универсальное имя".
   formInputError: ".form__input-error",
   form: ".form",
 };
@@ -20,9 +21,9 @@ export default class PopupWithForm extends Popup {
 
   setInputValues(userInfo, aboutUser) {
     const formInputName = this._formElement.querySelector(selectors.formInputName);
-    const formInputProfession = this._formElement.querySelector(selectors.formInputProfession);
+    const formInputDataUser = this._formElement.querySelector(selectors.formInputDataUser);
     formInputName.value = userInfo;
-    formInputProfession.value = aboutUser;
+    formInputDataUser.value = aboutUser;
   }
 
   _getInputValues() {
