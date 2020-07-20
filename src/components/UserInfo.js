@@ -16,3 +16,4 @@ export default class UserInfo {
     this._aboutUser.textContent = about;
   }
 }
+

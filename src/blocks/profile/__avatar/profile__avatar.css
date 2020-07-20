@@ -1,4 +1,5 @@
 .profile__avatar {
+  position: relative;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -6,4 +7,5 @@
   object-fit: cover;
   -o-object-position: center;
   object-position: center;
+  transition: opacity 0.4s;
 }

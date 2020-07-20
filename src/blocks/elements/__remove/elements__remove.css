@@ -12,9 +12,10 @@
   background-image: url(../../../images/remove-icon.svg);
   background-repeat: no-repeat;
   background-position: center;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  display: none;
 }
 
 .elements__remove:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
