@@ -4,7 +4,7 @@
   "description": "Яндекс.Практикум",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production",
+    "build": "rimraf dist && webpack --mode production",
     "dev": "webpack-dev-server --open --watch",
     "deploy": "gh-pages -d dist"
   },
@@ -24,8 +24,8 @@
     "css"
   ],
   "devDependencies": {
-    "@babel/core": "^7.10.3",
-    "@babel/preset-env": "^7.10.3",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "autoprefixer": "^9.8.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",

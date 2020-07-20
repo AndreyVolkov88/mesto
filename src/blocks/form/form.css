@@ -7,6 +7,7 @@
 @import "./__input-error/form__input-error.css";
 @import "./__input/_type_error/form__input_type_error.css";
 @import "./__input-container/form__input-container.css";
+@import "./__input-button/_comfirm/form__input-button_comfirm.css";
 
 .form {
   position: relative;

@@ -5,6 +5,7 @@
 @import "./__info-item/profile__info-item.css";
 @import "./__subtitle/profile__subtitle.css";
 @import "./__add-button/profile__add-button.css";
+@import "./__avatar-container/profile__avatar-container.css";
 
 .profile {
   display: flex;

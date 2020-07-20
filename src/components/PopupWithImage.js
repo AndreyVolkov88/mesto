@@ -1,9 +1,6 @@
 import Popup from "./Popup.js";
 
-const selectors = {
-  popUpImageImg: ".pop-up-image__img",
-  popUpImageDescription: ".pop-up-image__description",
-};
+import { selectors } from "../utils/constants.js";
 
 export default class PopupWithImage extends Popup {
   constructor(popupSelector) {
