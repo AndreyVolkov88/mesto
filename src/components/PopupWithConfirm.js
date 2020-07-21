@@ -1,6 +1,6 @@
-import Popup from "./Popup.js"
+import Popup from "./Popup.js";
 
-import { selectors } from "../utils/constants.js"
+import { selectors } from "../utils/constants.js";
 
 export default class PopupWithConfirm extends Popup {
     constructor(popupSelector) {
@@ -17,9 +17,9 @@ export default class PopupWithConfirm extends Popup {
       this._close();
     }
   
-    handleButton(cb) {
+    handleButton(c) {
       this._button = this._popup.querySelector(selectors.formInputButtonComfirm);
-      this._button.addEventListener("click", this._deleteCard.bind(this, cb));
+      this._button.addEventListener("click", this._deleteCard.bind(this, c));
     }
 }
   

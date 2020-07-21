@@ -7,7 +7,8 @@
 @import "../blocks/form/form.css";
 @import "../blocks/form/__input-error/_visible/form__input-error_visible.css";
 @import "../blocks/elements/elements.css";
-@import "../blocks/elements/__like/_active/elements__like_active.css";
+@import "../blocks/element/element.css";
+@import "../blocks/element/__like/_active/element__like_active.css";
 @import "../blocks/footer/footer.css";
 @import "../blocks/pop-up-image/pop-up-image.css";
 @import "../blocks/pop-up-opened/pop-up-opened.css";

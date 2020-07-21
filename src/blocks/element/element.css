@@ -1,0 +1,15 @@
+
+@import "./__image/element__image.css";
+@import "./__title/element__title.css";
+@import "../element/__bottom/element__bottom.css";
+@import "../element/__like/element__like.css";
+@import "../element/__remove/element__remove.css";
+@import "../element/__remove/_active/element__remove_active.css";
+@import "../element/__like-container/element__like-container.css";
+@import "../element/__like-counter/element__like-counter.css";
+
+.element {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}

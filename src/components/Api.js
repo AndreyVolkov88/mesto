@@ -17,7 +17,7 @@ export default class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
     })
-      .then(this._handleResponse)
+      .then(this._handleResponse);
   }
 
 

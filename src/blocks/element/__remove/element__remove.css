@@ -1,4 +1,4 @@
-.elements__remove {
+.element__remove {
   cursor: pointer;
   outline: none;
   padding: 0;
@@ -16,6 +16,6 @@
   display: none;
 }
 
-.elements__remove:hover {
+.element__remove:hover {
   opacity: 0.6;
 }

@@ -40,6 +40,6 @@ export default class Popup {
   // Установка слушателей событий
   setEventListeners(popupCloseIconSelector) {
     this._popupCloseIcon = this._popup.querySelector(popupCloseIconSelector);
-    this._popupCloseIcon.addEventListener("click", () => this.close())
+    this._popupCloseIcon.addEventListener("click", () => this.close());
   }
 }
