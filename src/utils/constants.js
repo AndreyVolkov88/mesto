@@ -17,13 +17,13 @@ export const profileAvatar = document.querySelector(
 
 export const selectors = {
   card: "#card",
-  elementsItem: ".elements__item",
-  elementsRemove: ".elements__remove",
-  elementsLike: ".elements__like",
+  element: ".element",
+  elementRemove: ".element__remove",
+  elementLike: ".element__like",
   elementsList: ".elements__list",
-  elementsImage: ".elements__image",
-  elementsItemTitle: ".elements__item-title",
-  elementsLikeCounter: ".elements__like-counter",
+  elementImage: ".element__image",
+  elementTitle: ".element__title",
+  elementLikeCounter: ".element__like-counter",
   popUpImageImg: ".pop-up-image__img",
   popUpImageDescription: ".pop-up-image__description",
   popUpImageCloseIcon: ".pop-up-image__close-icon",
@@ -49,7 +49,7 @@ export const selectors = {
 };
 
 export const classes = {
-  elementsLikeActive: "elements__like_active",
+  elementLikeActive: "element__like_active",
   formInputTypeError: "form__input_type_error",
   popUpOpened: "pop-up-opened",
 };

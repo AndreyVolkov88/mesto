@@ -97,7 +97,7 @@ const handleData = (data) => {
       });
     },
     handleButtonLike: () => {
-      if (!card.getElementLike().classList.contains("elements__like_active")) {
+      if (!card.getElementLike().classList.contains("element__like_active")) {
         api.putLike(data._id)
           .then((res) => {
             card.setLikes(res.likes);
@@ -114,9 +114,10 @@ const handleData = (data) => {
       }
     },
   });
+
+  //Создание карточки и добавление лайков
   const cardElement = card.generateCard(data.owner._id);
-  cardElement.querySelector(".elements__like-counter ").textContent =
-    data.likes.length;
+  card.setLikes(data.likes);
   cardList.appendItem(cardElement);
   formCard.close();
 };

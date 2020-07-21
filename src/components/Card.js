@@ -24,7 +24,7 @@ export default class Card {
     const cardElement = document
       .querySelector(this._templateSelector)
       .content.cloneNode(true)
-      .querySelector(selectors.elementsItem);
+      .querySelector(selectors.element);
 
     return cardElement;
   }
@@ -33,21 +33,21 @@ export default class Card {
   generateCard(id) {
     this._element = this._getTemplate();
     this._elementLikeCounter = this._element.querySelector(
-      selectors.elementsLikeCounter
+      selectors.elementLikeCounter
     );
-    this._elementRemove = this._element.querySelector(selectors.elementsRemove);
+    this._elementRemove = this._element.querySelector(selectors.elementRemove);
     if (id === "68d75b0661b87ec7db6ef84c") {
-      this._elementRemove.classList.add("elements__remove_active");
+      this._elementRemove.classList.add("element__remove_active");
     }
-    this._elementLike = this._element.querySelector(selectors.elementsLike);
+    this._elementLike = this._element.querySelector(selectors.elementLike);
     this._setColorLike("68d75b0661b87ec7db6ef84c", this._likes);
-    this._elementImage = this._element.querySelector(selectors.elementsImage);
+    this._elementImage = this._element.querySelector(selectors.elementImage);
     this._setEventListeners();
     this._element.querySelector(
-      selectors.elementsItemTitle
+      selectors.elementTitle
     ).textContent = this._name;
     this._element.querySelector(
-      selectors.elementsImage
+      selectors.elementImage
     ).style.backgroundImage = `url(${this._link})`;
 
     return this._element;
@@ -69,21 +69,30 @@ export default class Card {
 
   // включение/выключение лайков при нажатии на сердечко
   toggleLike() {
-    this._elementLike.classList.toggle(classes.elementsLikeActive);
+    this._elementLike.classList.toggle(classes.elementLikeActive);
   }
 
   //Установить цвет лайка
   _setColorLike(userId, arrLikes) {
     arrLikes.forEach((element) => {
       element._id === userId
-        ? this._elementLike.classList.add("elements__like_active")
+        ? this._elementLike.classList.add("element__like_active")
         : null;
     });
   }
 
    //Набор лайков
-  setLikes(arrLikes) {
-    this._elementLikeCounter.textContent = arrLikes.lengt
+   setLikes(arrLikes) {
+    this._elementLikeCounter.textContent = arrLikes.length;
+    this._elementLikeCounter.dataset.people = arrLikes
+      .reduce((acc, item) => {
+        acc.push(item.name);
+        return acc;
+      }, [])
+      .join(", ");
+    arrLikes.length > 0
+      ? this._elementLikeCounter.dataset.people
+      : null;
   }
 
    //Получить лайк
