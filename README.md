@@ -1,4 +1,4 @@
-# Проект 9: [Mesto](https://andreyvolkov88.github.io/mesto/)
+# Проект 9: [Mesto](https://andreyvolkov88.github.io/JavaScript-Mesto/)
 
 ------
 
@@ -45,4 +45,4 @@
 
 ________
 ### Опубликованный проект
-Ознакомиться с проектом вы сможете по ссылке [Mesto](https://andreyvolkov88.github.io/mesto/)
+Ознакомиться с проектом вы сможете по ссылке [Mesto](https://andreyvolkov88.github.io/JavaScript-Mesto/)
